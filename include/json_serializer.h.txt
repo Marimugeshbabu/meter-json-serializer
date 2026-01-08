@@ -1,0 +1,10 @@
+#ifndef JSON_SERIALIZER_H
+#define JSON_SERIALIZER_H
+
+#include "data_model.h"
+
+int serialize_to_json(GatewayData *input,
+                      char *output_buffer,
+                      int buffer_size);
+
+#endif

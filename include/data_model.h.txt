@@ -1,0 +1,34 @@
+#ifndef DATA_MODEL_H
+#define DATA_MODEL_H
+
+typedef struct {
+    char timestamp[20];
+    char meter_datetime[20];
+    float total_m3;
+    char status[10];
+} DataPoint;
+
+typedef struct {
+    char media[10];
+    char meter[20];
+    char deviceId[30];
+    char unit[10];
+    DataPoint data[1];
+    int data_count;
+} DeviceReading;
+
+typedef struct {
+    int device_count;
+    DeviceReading readings[1];
+} Values;
+
+typedef struct {
+    char gatewayId[20];
+    char date[11];
+    char deviceType[20];
+    int interval_minutes;
+    int total_readings;
+    Values values;
+} GatewayData;
+
+#endif
