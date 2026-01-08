@@ -1,4 +1,4 @@
-# Meter JSON Serializer
+# Meter JSON Serializer.
 
 This repository contains an embedded-friendly JSON serialization library
 implemented as part of a technical assignment.
