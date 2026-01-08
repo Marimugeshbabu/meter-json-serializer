@@ -5,7 +5,7 @@ developed as part of a technical assignment for an embedded/firmware role.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 In embedded smart-meter and gateway systems, measurement data is collected
 and stored internally using structured data types.  
@@ -20,7 +20,7 @@ and transport protocols are intentionally excluded.
 
 ---
 
-## 📘 What is JSON?
+## What is JSON?
 
 JSON (JavaScript Object Notation) is a lightweight, human-readable text
 format used to exchange structured data between systems.
@@ -44,15 +44,13 @@ The library is transport-agnostic and hardware-independent
 
 Suitable for embedded environments with limited resources
 
-📂 Project Structure
+##Project Structure
 pgsql
-Copy code
 include/    - Data models and public API
 src/        - JSON serialization implementation
 examples/   - Example application demonstrating usage
 🔧 Public API
-c
-Copy code
+
 int serialize_to_json(GatewayData *input,
                       char *output_buffer,
                       int buffer_size);
@@ -66,7 +64,6 @@ Returns number of bytes written or error code
 The example application generates the following JSON output:
 
 json
-Copy code
 [
   {
     "gatewayId": "gateway_1234",
@@ -120,15 +117,3 @@ Support for multiple devices and data points
 Deserialization (JSON → struct)
 
 Integration with transport layers (MQTT, HTTP)
-
-
-
-
-
-
-
-
-
-
-
-ChatGPT can make mistakes. Check
